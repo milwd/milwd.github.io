@@ -5,30 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <title>Milad Rabiei</title>
+
+    
 </head>
 <body>
     <header>
         <h1>Milad Rabiei</h1>
-        <p>Computer Vision and Robotics Researcher</p>
+        <p>Researcher</p>
     </header>
 
-    <nav>
+    
+
+    <nav id="navbar">
         <ul>
             <li><a href="#About">About</a></li>
-            <li><a href="#Research">Research</a></li>
-            <li><a href="#Publications">Publications</a></li>
+            <li><a href="#Research">Research & Publications</a></li>
             <li><a href="#Experience">Experience</a></li>
-            <li><a href="#Contact">Contact</a></li>
+            <li><a href="#Courses">Courses</a></li>
+            <li style="color: white;">|</li>
+            <li><a href="https://linkedin.com/in/miladrabiei"><img src="files/linkedin-logo-png-2026.png" style="width: 25px; height: auto;" alt="LinkedIn"></a></li>
+            <li><a href="https://github.com/milwd"><img src="files/GitHub_Logo.png" style="width: 62px; height: auto;" alt="Github"></a></li>
+            <li><a href="mailto:milad.rabiei.01@gmail.com"><img src="files/email-13765.png" style="width: 37px; height: auto;" alt="Preferred Email"></a></li>
         </ul>
     </nav>
 
-    <section id="About">
+    <script>
+        let navbar = document.getElementById("navbar");
+        let navPos = navbar.getBoundingClientRect().top;
+        window.addEventListener("scroll", e => {
+        let scrollPos = window.scrollY;
+        if (scrollPos > navPos) {
+            navbar.classList.add('sticky');
+            header.classList.add('navbarOffsetMargin');
+        } else {
+            navbar.classList.remove('sticky');
+            header.classList.remove('navbarOffsetMargin');
+        }
+        });
+    </script>
+
+    <section id="About" style="background-color:rgb(230, 230, 230);">
+        <br>
         <h1>About Me</h1>
         <br>
         <div class="content">
             <img src="imgs/personal.jpg" alt="personal">
             <p class="justified-text">My name is Milad Rabiei. I'm a senior-year undergrad of Electrical Engineering, Electronics and Communications at Shahid Beheshti University, Tehran. 
-                <br><br>
+                <br><br>                
                 Professionally, I'm interested in Autonomous Systems, Computer Vision in Robotics, and Reinforcement Learning. 
                 The combination of computer vision and control systems, especially path planning algorithms, have proven to be a robust solution to robot autonomy. 
                 My main field of interest can be described as the intersect of vision, control, and learning algorithms. <br>
@@ -40,23 +63,29 @@
         <br>
         <h3>Skills (summarized)</h3>
         <br>
-        <ul>
             <li>Proficient in Python, C, MATLAB</li>
             <li>Experienced with OpenCV, PyTorch, Numpy, Matplotlib, Scikit-learn, Tensorflow, Pandas, Selenium</li>
             <li>Familiar with Raspberry Pi, Nvidia Jetson, Arduino, NodeMCU ESP8266, ESP32</li>
-            <li>Fluent in English - IELTS Test Result: 7.5, L(8.5), R(8), W(7), S(7)</li>
-        </ul>    
+            <br>
+            <li>Fluent in English - IELTS (Feb 4th, 2023) Test Result: 7.5, L(8.5), R(8), W(7), S(7)</li>
     </section>
 
-    <section id="#Research">
-        <h1>Research</h1>
+    <section id="#Research" style="background-color:rgb(240, 240, 240);">
+        <h1>Research & Publications</h1>
         <br>
-        <h4>Computer Vision and Machine Learning, Shahid Beheshti University's Robotics Lab | <a href="https://youtu.be/MvSlxgno_cs?si=IZH50RocR3ewLgGe">Youtube</a>, <a href="https://www.linkedin.com/company/shahid-beheshti-university-robotics-team/">LinkedIn</a></h3>
+        <h4><mark style="background-color: rgb(253, 246, 138);">Computer Vision and Machine Learning</mark></h4>
+        <br>
+        <li><mark style="background-color:rgb(255, 240, 213);">(Under Preparation) Mohammad Hossein Moaiyeri, Seyed Parsa Hemmasi, <b>Milad Rabiei</b> | <b>Unified Driver's Behavior Recognizer System Aiming to Provide Safety for Connected Cars</b> [Since 2023]</mark></li>
+        <br>
+        <p class="justified-text">Abstract tbd</p>
+        <br> <br>
+        <li><mark style="background-color:rgb(255, 240, 213);">(Under Preparation) Farbod Younesi, Soroush Keivanfard*, <b>Milad Rabiei</b>*, Mohsen Sharifi*, Marzieh Ghayour Najafabadi, Bahar Moadeli, Arshia Jafari, Mohammad Hossein Moaiyeri | 
+            <b>Cost-Efficient Four-Wheeled Robot: A Novel Platform for Density-Based Lane Trackers and PID-Based Controllers</b> [Since 2022]</mark> <a href="https://youtu.be/MvSlxgno_cs?si=IZH50RocR3ewLgGe"><b>Youtube</b></a></li> 
         <br>
         <p class="justified-text">
             There has been a growth in the applications of autonomous transport systems in recent years, and small-scale robots are widely used as prototypes for investigating new algorithms. 
             This study focuses on emulating a full-size autonomous vehicle on a low-cost 1:10 scale robot. 
-            Various computer vision, machine learning, and control algorithms are implemented throughout this study, and the system communication architecture is based on ROS.
+            Various computer vision, machine learning, and control algorithms are implemented throughout this study, and the system communication architecture is based on ROS. 
         </p>
         <br>
         <div class="table-container">
@@ -73,9 +102,12 @@
                 </tr>
             </table>
         </div>
-        <br>
+        <br> <br>
 
-        <h4>Maintaining Privacy in Generative AI</h3>
+        <h4><mark style="background-color: rgb(202, 253, 126);">Maintaining Privacy in Generative AI</mark></h3>
+        <br>
+        <li><mark style="background-color: rgb(234, 255, 203);">(Submitted to International Journal of Information Security) Vahideh Moghtadaiee, Mina Alishahi, <b>Milad Rabiei</b> | 
+            <b>Differentially Private GANs for Generating Synthetic Indoor Location Data</b> [2023]</mark> [<a href="files/privateml.pdf"><b>paper pdf</b></a>]</li>
         <br>
         <p class="justified-text">
             The advent of location-based services has led to the widespread adoption of indoor localization systems, which enable location tracking of individuals within enclosed spaces such as buildings. 
@@ -94,27 +126,14 @@
         </div>
     </section>
 
-    <section id="#Publications">
-        <h1>Publications</h1>
-        <br>
-        <ul>
-            <li>(Under Preparation) Unified Driver's Behavior Recognizer System Aiming to Provide Safety for Connected Cars [Since 2023]</li>
-            <br>
-            <li>(Under Preparation) Farbod Younesi, Soroush Keivanfard*, Milad Rabiei*, Mohsen Sharifi*, Marzieh Ghayour Najafabadi, Bahar Moadeli, Arshia Jafari, Mohammad Hossein Moaiyeri | 
-                Cost-Efficient Four-Wheeled Robot: A Novel Platform for Density-Based Lane Trackers and PID-Based Controllers [Since 2022]</li>
-            <br>
-            <li>(Submitted to International Journal of Information Security) Vahideh Moghtadaiee, Mina Alishahi, Milad Rabiei | 
-                Differentially Private GANs for Generating Synthetic Indoor Location Data [2023]</li>
-        </ul>
-    </section>
-
-    <section id="#Experience">
+    <section id="#Experience" style="background-color:rgb(230, 230, 230);">
         <h1>Professional Experience</h1>
         <br>
-        <ul>
+            <li>Computer Vision and ML Researcher, <a href="https://www.linkedin.com/company/shahid-beheshti-university-robotics-team/">Shahid Beheshti University Robotics Lab</a></li>
+            <br>
             <li>Technical Committee, IranOpen RoboCup 2023</li>
             <br>
-            <li>Lecturer for Machine Learning Course, RoboCamp</li>
+            <li>Lecturer for Machine Learning Course, <a href="https://iranrobocamp.com/">RoboCamp</a></li>
             <br>
             <h4>University</h4>
             <br>
@@ -123,26 +142,50 @@
             <li>Teaching Assistant for Computer Programming (Python) Course, Instructed by Dr. Vahideh Moghtadaiee</li>
             <br>
             <li>Member of Electrical Engineering and Robotics Scientific Associations, Department of Electrical and Computer Engineering at SBU</li>
-        </ul>
+            <br>
+            <h4>Voluntary</h4>
+            <br>
+            <li>Successful Management of the 13th Power Electronics & Drives: Systems and Technologies Conference (PEDSTC 2022) on 1-3 Feb 2022 at Shahid Beheshti University, Tehran, Iran | [<a href="files/pedstc 001.jpg">Certificate</a>]</li>
+            <br>
+            <li>Successful Management of the 4th Iranian International Conference on Microelectronics (IICM 2022) on 20-22 Dec 2022 at Shahid Beheshti University, Tehran, Iran | [<a href="files/iicm 001.jpg">Certificate</a>]</li>
     </section>
 
-    <section id="Contact">
-        <h1>Contact Me</h1>
+    <section id="#Honors" style="background-color:rgb(240, 240, 240);">
+        <h1>Awards and Honors</h1>
         <br>
-        <p><a href="https://linkedin.com/in/miladrabiei">LinkedIn</a> | 
-            <a href="mailto:milad.rabiei.01@gmail.com">Personal Email (Preferred at the moment)</a> | 
-            <a href="mailto:m.rabiei@mail.sbu.ac.ir">University Email</a>
-        </p>
+            <li>1st place, Individual Team Section, Autonomous Vehicles League | IranOpen RoboCup 2022</li>
+            <br>
+            <li>1st place, Technical Challenge, Autonomous Vehicles League | IranOpen RoboCup 2022</li>
+            <br>
+            <li>2nd place, Race Section, Autonomous Cars League Simulation | Fira RoboWorld Cup SDE 2021</li>
+            <br>
+            <li>1st place, Race Section, Autonomous Cars League Simulation | Iran Fira RoboWorld Cup 2021</li>
+            <br>
+            <li>2nd place, Urban Section, Autonomous Cars League Simulation | Iran Fira RoboWorld Cup 2021</li>
     </section>
+
+
+    <section id="#Courses" style="background-color:rgb(230, 230, 230);">
+        <h1>Relative Coursework</h1>
+        <br>
+            <li>[Coursera/DeepLearning.ai] Build Basic Generative Adversarial Networks(GANs) | <a href="https://coursera.org/verify/YGA7UKAGVXBC">Certificate</a></li>
+            <br>
+            <li>[Coursera/Stanford University] Machine Learning | <a href="https://coursera.org/verify/8DHSV5JCYGYU">Certificate</a></li>
+            <br>
+            <li>[Coursera/University of Alberta] Fundamentals of Reinforcement Learning | <a href="https://coursera.org/verify/DZZPFV85AW3J">Certificate</a></li>
+            <br>
+            <li>[Coursera/Edge Impulse] Introduction to Embedded Machine Learning | <a href="https://coursera.org/verify/NYWW2YFDWNEN">Certificate</a></li>
+            <br>
+            <li>[Solo Learn] Python Core, Machine Learning, Go</li>
+            <br>
+            <br>
+            <li>[Relative University Coursework] Introduction to Artificial Intelligence, Linear Algebra, Digital Electronics, Numerical Methods, Probability and Statistics, Microcontrollers, Logic Circuits and Digital Systems, Computer Programming</li>
+    </section>
+
 
     <footer>
-        <p>&copy; Milad Rabiei</p>
+        <p>&copy; 2023-Milad Rabiei</p>
     </footer>
-
-    <a href="#" id="back-to-top" style="display: none;">Back to Top</a>
-    <script src="styles/scroll.js"></script>
-
-    
 
 </body>
 </html>
