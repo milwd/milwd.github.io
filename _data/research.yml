@@ -15,3 +15,13 @@
     - text: "Springer"
       url: "https://link.springer.com/article/10.1007/s10207-025-01020-4"
   description: "An indoor localization data framework employing DPGANs to generate privacy-preserving indoor location data."
+
+- title: "An Optimized Density-Based Lane Keeping System for A Cost-Efficient Autonomous Vehicle Platform"
+  authors: "Farbod Younesi, <strong>Milad Rabiei</strong>, Soroosh Keivanfard, Mohsen Sharifi, Marzieh Ghayour, Bahar Moadeli, Arshia Jafari, Mohammad Hossein Moaiyeri"
+  venue: "Manuscript, 2023"
+  image: "/files/images/paper/paper AV robot.png"
+  highlight: true
+  links:
+    - text: "ArXiv"
+      url: "https://doi.org/10.48550/arXiv.2504.04217"
+  description: ""

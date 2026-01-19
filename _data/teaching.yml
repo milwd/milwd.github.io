@@ -18,6 +18,7 @@
   courses:
     - name: "Machine Learning 101"
       term: "Summer 2023"
+      alongside: "S. Parsa Hemmasi"
 
 - institution: "Danesh High School"
   title: "Instructor"

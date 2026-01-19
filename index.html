@@ -82,7 +82,11 @@ layout: default
     <tr>
       <td style="padding:8px;width:100%;vertical-align:middle">
         {% for role in site.data.teaching %}
-          <p><strong>{{ role.institution }}</strong> &nbsp; | &nbsp; {{ role.title }} &nbsp; | &nbsp; <em>{{ role.years }}</em></p>
+          <!-- <p><strong>{{ role.institution }}</strong> &nbsp; | &nbsp; {{ role.title }} &nbsp; | &nbsp; <em>{{ role.years }}</em></p> -->
+           <div style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 4px;">
+            <span><strong>{{ role.institution }}</strong> &nbsp; | &nbsp; {{ role.title }}</span>
+            <em style="white-space: nowrap;">{{ role.years }}</em>
+          </div>
           <ul>
             {% for course in role.courses %}
             <li><strong>{{ course.name }}</strong> — {{ course.term }}<br>
