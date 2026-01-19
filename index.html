@@ -1,395 +1,138 @@
-<!DOCTYPE HTML>
-<html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+---
+layout: default
+---
 
-    <title>Milad Rabiei</title>
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <tbody>
+    <tr>
+      <td style="padding:16px;width:100%;vertical-align:middle">
+        <h2>Research</h2>
+        <p>I'm interested in embodied cognition, neurosymbolic AI, and deep learning, and their applications in robotics.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-    <meta name="author" content="Milad Rabiei">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
-  </head>
-
-  <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Milad Rabiei
-                </p>
-                <p>
-		I am a MSc student of <b>Robotics Engineering</b> at <b>Università degli Studi di Genova</b>, Italy. <br><br>
-    Having received full undergraduate scholarship, I did my bachelors in Electrical Engineering at Shahid Beheshti University, Iran, under the supervision of <a href="https://scholar.google.com/citations?user=VzPbMOoAAAAJ&hl=en">Dr. Mohammad Hossein Moaiyeri</a>.
-    I had the privilege of establishing the Vision division of <a href="https://sbu-team.github.io/">SBU’s Robotics and Intelligent Automation Lab</a> with my peers,
-    and have been rewarded by the university president and department dean for my contributions to First place victories of the team in international competitions. 
-    <br>
-    A livello personale, mi interessa esplorare nuovi hobby, viaggiare e apprendere continuamente ;).
-                </p>
-                <p style="text-align:center">
-                  <a href="mailto:milad.rabiei.01@gmail.com">Email</a> &nbsp;/&nbsp;
-                  <a href="./files/Milad Rabiei CV.pdf">CV</a> &nbsp;/&nbsp;
-                  <a href="https://scholar.google.com/citations?hl=en&user=DTsVYhoAAAAJ">Scholar</a> &nbsp;/&nbsp;
-                  <a href="https://linkedin.com/in/miladrabiei">LinkedIn</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/milwd/">GitHub</a>
-                </p>
-              </td>
-              <td style="padding:2.5%;width:37%;max-width:37%">
-                <img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="./files/images/profile/profile2.jpg" class="hoverZoomLink">
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
-                <p>
-                  I'm interested in embodied cognition, neurosymbolic AI, and deep learning, and their applications in robotics.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-
-    <tr bgcolor="#ffffd0">
+<table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <tbody>
+    {% for paper in site.data.research %}
+    <tr {% if paper.highlight %}bgcolor="#ffffd0"{% endif %}>
       <td style="padding:16px;width:20%;vertical-align:middle">
-        <div > 
-          <img src='./files/images/paper/paper1_arch.png' width="160">
+        <div>
+          <img src="{{ paper.image | relative_url }}" width="160">
         </div>
       </td>
       <td style="padding:8px;width:80%;vertical-align:middle">
-          <span class="papertitle">Mutual Impact of Feature Selection and Privacy-preserving Mechanisms</span>
+        <span class="papertitle">{{ paper.title }}</span>
         <br>
-        <a href="https://scholar.google.com/citations?user=MEycBiMAAAAJ&hl=en">Mina Alishahi</a>,
-        <a href="https://scholar.google.com/citations?user=rMSKMg4AAAAJ&hl=en">Vahideh Moghtadaiee</a>,
-        <a href="https://scholar.google.com/citations?user=bafgSwIAAAAJ&hl=en">Amir Fathalizadeh</a>,
-		<strong>Milad Rabiei</strong>
+        {{ paper.authors }}
         <br>
-        <em>Under review at Pervasive and Mobile Computing</em>, 2024-5
+        <em>{{ paper.venue }}</em>
         <br>
-        <a href="https://doi.org/10.21203/rs.3.rs-4394811/v1">arXiv</a>
-        <p></p>
-        <p>
-		A comprehensive examination of preservation of features’ significances between privatized datasets and originals, addressing information hiding in privacy-preserving techniques.
-        </p>
+        {% if paper.links %}
+          {% for link in paper.links %}
+            <a href="{{ link.url }}">{{ link.text }}</a> {% unless forloop.last %}/ {% endunless %}
+          {% endfor %}
+        {% endif %}
+        <p>{{ paper.description }}</p>
       </td>
     </tr>
+    {% endfor %}
+  </tbody>
+</table>
 
-    <tr bgcolor="#ffffd0">
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <tbody>
+    <tr>
+      <td style="padding:16px;width:100%;vertical-align:middle">
+        <h2>Projects</h2>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <tbody>
+    {% for project in site.data.projects %}
+    <tr>
       <td style="padding:16px;width:20%;vertical-align:middle">
-        <div > 
-          <img src='./files/images/paper/paper2_arch.png' width="160">
+        <div>
+          <img src="{{ project.image | relative_url }}" width="160">
         </div>
       </td>
       <td style="padding:8px;width:80%;vertical-align:middle">
-          <span class="papertitle">Differentially Private GANs for Generating Synthetic Indoor Location Data</span>
-        <br>
-        <a href="https://scholar.google.com/citations?user=MEycBiMAAAAJ&hl=en">Mina Alishahi</a>,
-        <a href="https://scholar.google.com/citations?user=rMSKMg4AAAAJ&hl=en">Vahideh Moghtadaiee</a>,
-		<strong>Milad Rabiei</strong>
-        <br>
-        <em>Accepted at International Journal of Information Security</em>, 2024-5
-        <br>
-        <a href="https://link.springer.com/article/10.1007/s10207-025-01020-4">Springer</a>
-        <p></p>
-        <p>
-		An indoor localization data framework employing DPGANs to generate privacy-preserving indoor location data, 
-    performance evaluation on a real-world indoor localization dataset.
-        </p>
+        <span class="papertitle">{{ project.title }}</span><br>
+        {% if project.link %}
+        <a href="{{ project.link }}">{{ project.link_text }}</a>
+        {% endif %}
+        <p>{{ project.description }}</p>
       </td>
     </tr>
+    {% endfor %}
+  </tbody>
+</table>
 
-    <tr bgcolor="#ffffd0">
-      <td style="padding:16px;width:20%;vertical-align:middle">
-        <div > 
-          <img src='./files/images/paper/paper AV robot.png' width="160">
-        </div>
-      </td>
-      <td style="padding:8px;width:80%;vertical-align:middle">
-          <span class="papertitle">An Optimized Density-Based Lane Keeping System for A Cost-Efficient Autonomous Vehicle Platform</span>
-          <br>
-        <a href="https://www.linkedin.com/in/farbod-younesi">Farbod Younesi</a>,
-        <strong>Milad Rabiei</strong>,
-        <a href="https://www.linkedin.com/in/soroosh-keivanfard">Soroosh Keivanfard</a>,
-        <a href="https://www.linkedin.com/in/mohsen-sharifi-778b75232">Mohsen Sharifi</a>,
-        <a href="https://scholar.google.com/citations?user=b8APukMAAAAJ&hl=en">Marzieh Ghayour</a>,
-        <a href="https://scholar.google.com/citations?user=jfmE2lcAAAAJ&hl=en">Bahar Moadeli</a>,
-        <a href="https://www.linkedin.com/in/arshia-jafary-4b23b019b">Arshia Jafari</a>,
-        <a href="https://scholar.google.com/citations?user=VzPbMOoAAAAJ&hl=en">Mohammad Hossein Moaiyeri</a>,
-        <br>
-        <em>Manuscript</em>, 2023
-        <br>
-        <a href="https://doi.org/10.48550/arXiv.2504.04217">ArXiv</a>
-        <p></p>
-        <p>
-		
-        </p>
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <tbody>
+    <tr>
+      <td style="padding:16px;width:100%;vertical-align:middle">
+        <h2>Teaching</h2>
       </td>
     </tr>
+    <tr>
+      <td style="padding:8px;width:100%;vertical-align:middle">
+        {% for role in site.data.teaching %}
+          <p><strong>{{ role.institution }}</strong> &nbsp; | &nbsp; {{ role.title }} &nbsp; | &nbsp; <em>{{ role.years }}</em></p>
+          <ul>
+            {% for course in role.courses %}
+            <li><strong>{{ course.name }}</strong> — {{ course.term }}<br>
+              {% if course.instructor %}<em>Instructor:</em> {{ course.instructor }}{% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        {% endfor %}
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-    </tbody></table>
-
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-          <td style="padding:16px;width:100%;vertical-align:middle">
-            <h2>Projects</h2>
-          </td>
-        </tr>
-      </tbody></table>
-      <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-        
-
-        <tr>
-          <td style="padding:16px;width:20%;vertical-align:middle">
-            <div>
-              <img src="./files/images/project/project_pddl.png" width="160">
-            </div>
-          </td>
-          <td style="padding:8px;width:80%;vertical-align:middle">
-            <span class="papertitle">Warehouse Automation with PDDL+</span><br>
-            <a href="https://github.com/milwd/Automated-Planning-for-Warehouse">Code</a>
-            <p>
-              Designed a planning domain for 5 warehouse automation scenarios involving robots loading crates and operating conveyor belts. Applied PDDL+ for modeling hybrid behaviors.
-            </p>
-          </td>
-        </tr>
-
-        <tr>
-          <td style="padding:16px;width:20%;vertical-align:middle">
-            <div>
-              <img src="./files/images/project/project_drone.gif" width="160">
-            </div>
-          </td>
-          <td style="padding:8px;width:80%;vertical-align:middle">
-            <span class="papertitle">2D Drone Simulation with FastDDS</span><br>
-            <a href="https://github.com/milwd/2D-Drone-Simulation-Remote">Code</a>
-            <p>
-              Terminal-based interactive drone simulator with obstacle avoidance using Khatib's model. Supports local and remote object interaction via FastDDS.
-            </p>
-          </td>
-        </tr>
-
-        <tr>
-          <td style="padding:16px;width:20%;vertical-align:middle">
-            <div>
-              <img src="./files/images/project/project_cartpole.gif" width="160">
-            </div>
-          </td>
-          <td style="padding:8px;width:80%;vertical-align:middle">
-            <span class="papertitle">Cartpole Q-Learning</span><br>
-            <a href="https://github.com/milwd/Cartpole-Qlearning">Code</a>
-            <p>
-              Solved the CartPole reinforcement learning task using Q-learning. Implemented environment interaction, Q-table updates, and reward maximization strategies.
-            </p>
-          </td>
-        </tr>
-
-        <tr>
-          <td style="padding:16px;width:20%;vertical-align:middle">
-            <div>
-              <img src="./files/images/project/project_av.png" width="160">
-            </div>
-          </td>
-          <td style="padding:8px;width:80%;vertical-align:middle">
-            <span class="papertitle">1:10 Scale Self-Driving Robot Car</span><br>
-            <a href="https://youtube.com/@aurigarobotics?si=pKOaJpqcX67njgX1">Youtube</a>
-            <p>
-              Developed end-to-end autonomous driving system including lane detection, traffic sign recognition, and synthetic data augmentation. Deployed deep models in real-time.
-            </p>
-          </td>
-        </tr>
-
-        <tr>
-          <td style="padding:16px;width:20%;vertical-align:middle">
-            <div>
-              <img src="./files/images/project/project_mp.jpg" width="160">
-            </div>
-          </td>
-          <td style="padding:8px;width:80%;vertical-align:middle">
-            <span class="papertitle">Face and Hand Gesture Detection</span><br>
-            <a href="https://github.com/milwd/Hand-Gesture-Recognition">Code</a>
-            <p>
-              Built a gesture recognition system using Mediapipe landmarks and neural networks for sign language detection. Real-time output sent to ESP32 hardware.
-            </p>
-          </td>
-        </tr>
-
-        <tr>
-          <td style="padding:16px;width:20%;vertical-align:middle">
-            <div>
-              <img src="./files/images/project/project_genetic.gif" width="160">
-            </div>
-          </td>
-          <td style="padding:8px;width:80%;vertical-align:middle">
-            <span class="papertitle">Image Recovery with Genetic Algorithm</span><br>
-            <a href="https://github.com/milwd/AlanTuring-GeneticAlgorithmProject">Code</a>
-            <p>
-              Reconstructed an image of Alan Turing using a custom genetic algorithm with enhanced mutation and crossover techniques on random pixel arrays.
-            </p>
-          </td>
-        </tr>
-
-        <tr>
-          <td style="padding:16px;width:20%;vertical-align:middle">
-            <div>
-              <img src="./files/images/project/project_sobel.jpg" width="160">
-            </div>
-          </td>
-          <td style="padding:8px;width:80%;vertical-align:middle">
-            <span class="papertitle">Sobel Edge Detection in VHDL</span><br>
-            <a href="https://github.com/milwd/Sobel-Edge-Detector-Algorithm">Code</a>
-            <p>
-              Implemented Sobel edge detection on FPGA using VHDL. Python used for pixel parsing and integration. Simulated in Xilinx ISE.
-            </p>
-          </td>
-        </tr>
-
-        <tr>
-          <td style="padding:16px;width:20%;vertical-align:middle">
-            <div>
-              <img src="./files/images/project/project_movie.jpg" width="160">
-            </div>
-          </td>
-          <td style="padding:8px;width:80%;vertical-align:middle">
-            <span class="papertitle">Movie Recommendation System</span><br>
-            <a href="https://github.com/milwd/movie-recommendation-system-BPproject">Code</a>
-            <p>
-              CLI-based C++ recommender system using collaborative filtering and cosine similarity. Works on dynamic user-movie rating datasets.
-            </p>
-          </td>
-        </tr>
-
-        <tr>
-          <td style="padding:16px;width:20%;vertical-align:middle">
-            <div>
-              <img src="./files/images/project/project2.jpg" width="160">
-            </div>
-          </td>
-          <td style="padding:8px;width:80%;vertical-align:middle">
-            <span class="papertitle">GAN / CGAN on MNIST</span>
-            <p>
-              Generated synthetic handwritten digits using GAN and Conditional GAN architectures. Explored conditional sampling based on digit class labels.
-            </p>
-          </td>
-        </tr>
-
-        <tr> 
-          <td style="padding:16px;width:20%;vertical-align:middle">
-            <div>
-              <img src="./files/images/project/mosayeb.png" width="160">
-            </div>
-          </td>
-          <td style="padding:8px;width:80%;vertical-align:middle">
-            <span class="papertitle">Ball Balancer Bot</span><br>
-            <a href="https://www.aparat.com/v/c22hbgy">Description</a>
-            <p>
-              Designed a PID-controlled system using ESP8266 and ToF sensors to stabilize a ball on a rod. Supports remote setpoint control via web interface.
-            </p>
-          </td>
-        </tr>
-
-      </tbody></table>
-
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-        <tbody>
-          <tr>
-            <td style="padding:16px;width:100%;vertical-align:middle">
-              <h2>Teaching</h2>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:8px;width:100%;vertical-align:middle">
-              <p><strong>Shahid Beheshti University</strong> &nbsp; | &nbsp; Head Teaching Assistant &nbsp; | &nbsp; <em>2021 – 2024</em></p>
-              <ul>
-                <li><strong>Machine Learning</strong> — Fall 2023, Spring 2024<br>
-                  <em>Instructor:</em> Dr. Reza Ghaderi
-                </li>
-                <li><strong>Introduction to Artificial Intelligence</strong> — Spring 2023<br>
-                  <em>Instructor:</em> Dr. Atefe Aghaei
-                </li>
-                <li><strong>Computer Programming</strong> — Spring 2021, Fall 2022<br>
-                  <em>Instructor:</em> Dr. Vahideh Moghtadaiee
-                </li>
-              </ul>
-              <p><strong>RoboCamp</strong> &nbsp; | &nbsp; Instructor</p>
-              <ul>
-                <li><strong>Machine Learning 101</strong> — Summer 2023<br></li>
-              </ul>
-              <p><strong>Danesh High School</strong> &nbsp; | &nbsp; Instructor</p>
-              <ul>
-                <li><strong>Programming Fundamentals</strong> — Summer 2024<br></li>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-					<table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
-            <tr>
-              <td>
-                <h2>Miscellanea</h2>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            
-            <tr>
-                <p><strong>Amazing reads:</strong></p>
-                <ul>
-                  <li>A PhD Is Not Enough – Peter Feibelman</li>
-                  <li>Crafting Your Research Future – Charles Ling, Qiang Yang</li>
-                  <br>
-                  <li>Surely You're Joking, Mr. Feynman – Richard Feynman</li>
-				  <li>AI: Great Expectations (1988, one-page note on AI) – Rodney Brooks</li>
-                  <br>
-                  <li>A Mathematical Introduction to Robot Manipulation – Murray, Sastry, Li</li>
-                  <li>Probabilistic Robotics – Thrun, Burgard, Fox</li>
-                  <br>
-				  <li>Grokking Deep Reinforcement Learning - Miguel Morales</li>
-                  <li>Reinforcement Learning: An Introduction – Barto, Sutton</li>
-				  <br>
-                  <li>An Introduction to Quantum Computing – Kaye, Laflamme, Mosca</li>
-				  <li>Physical Mathematics – Michael P. Brenner</li>
-                  <li>Artificial Intelligence: A Modern Approach – Norvig, Russell</li>
-                  <li>Deep Learning – Courville, Goodfellow, Bengio</li>
-                  <li>Information Theory: From Coding to Learning – Wu, Polyanskiy</li>
-                  <li>Data Science from Scratch – Joel Grus</li>
-				  <li>The Road to Reality – Roger Penrose</li>
-                  <li>Beej's Guide to C Programming</li>
-                </ul>
-                 <p><strong>Mechanics/Screw Theory Notes:</strong></p>
-                <ul>
-                  <li><a href="./files/rlnotes/MMM_Notes.pdf">MMM Notes</a></li>
-                </ul>
-				<p><strong>Reinforcement Learning Notes:</strong></p>
-                <ul>
-                  <li><a href="./files/rlnotes/Reinforcement Learning Notes 1.pdf">Part I: Intro and MDP</a></li>
-                  <li><a href="./files/rlnotes/Reinforcement Learning Notes 2.pdf">Part II: Dynamic Programming</a></li>
-                </ul>
-              <!-- </td> -->
-            </tr>
-           
-            
-            
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:0px">
-                <br>
-                <p style="text-align:right;font-size:small;">
-                  Design and source taken from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's</a>. Last updated May 2025. 
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-        </td>
-      </tr>
-    </table>
-  </body>
-</html>
+<table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;">
+  <tbody>
+    <tr>
+      <td>
+        <h2>Miscellanea</h2>
+        <p><strong>Amazing reads:</strong></p>
+        <ul>
+           <li>A PhD Is Not Enough – Peter Feibelman</li>
+           <li>Crafting Your Research Future – Charles Ling, Qiang Yang</li>
+           <li>Surely You're Joking, Mr. Feynman – Richard Feynman</li>
+           <li>AI: Great Expectations (1988, one-page note on AI) – Rodney Brooks</li>
+           <br>
+           <li>A Mathematical Introduction to Robot Manipulation – Murray, Sastry, Li</li>
+           <li>Probabilistic Robotics – Thrun, Burgard, Fox</li>
+           <br>
+           <li>Grokking Deep Reinforcement Learning - Miguel Morales</li>
+           <li>Reinforcement Learning: An Introduction – Barto, Sutton</li>
+           <br>
+           <li>An Introduction to Quantum Computing – Kaye, Laflamme, Mosca</li>
+           <li>Physical Mathematics – Michael P. Brenner</li>
+           <li>Artificial Intelligence: A Modern Approach – Norvig, Russell</li>
+           <li>Deep Learning – Courville, Goodfellow, Bengio</li>
+           <li>Information Theory: From Coding to Learning – Wu, Polyanskiy</li>
+           <li>Data Science from Scratch – Joel Grus</li>
+           <li>The Road to Reality – Roger Penrose</li>
+           <li>Beej's Guide to C Programming</li>
+        </ul>
+         <p><strong>Mechanics/Screw Theory Notes:</strong></p>
+        <ul>
+          <li><a href="./files/rlnotes/MMM_Notes.pdf">MMM Notes</a></li>
+        </ul>
+        <p><strong>Reinforcement Learning Notes:</strong></p>
+        <ul>
+          <li><a href="./files/rlnotes/Reinforcement Learning Notes 1.pdf">Part I: Intro and MDP</a></li>
+          <li><a href="./files/rlnotes/Reinforcement Learning Notes 2.pdf">Part II: Dynamic Programming</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,17 @@
+- title: "Mutual Impact of Feature Selection and Privacy-preserving Mechanisms"
+  authors: "Mina Alishahi, Vahideh Moghtadaiee, Amir Fathalizadeh, <strong>Milad Rabiei</strong>"
+  venue: "Under review at Pervasive and Mobile Computing, 2024-5"
+  image: "/files/images/paper/paper1_arch.png"
+  links:
+    - text: "arXiv"
+      url: "https://doi.org/10.21203/rs.3.rs-4394811/v1"
+  description: "A comprehensive examination of preservation of features’ significances between privatized datasets and originals."
+
+- title: "Differentially Private GANs for Generating Synthetic Indoor Location Data"
+  authors: "Mina Alishahi, Vahideh Moghtadaiee, <strong>Milad Rabiei</strong>"
+  venue: "Accepted at International Journal of Information Security, 2024-5"
+  image: "/files/images/paper/paper2_arch.png"
+  links:
+    - text: "Springer"
+      url: "https://link.springer.com/article/10.1007/s10207-025-01020-4"
+  description: "An indoor localization data framework employing DPGANs to generate privacy-preserving indoor location data."

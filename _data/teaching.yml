@@ -1,0 +1,27 @@
+- institution: "Shahid Beheshti University"
+  title: "Head Teaching Assistant"
+  years: "2021 – 2024"
+  courses:
+    - name: "Machine Learning"
+      term: "Fall 2023, Spring 2024"
+      instructor: "Dr. Reza Ghaderi"
+    - name: "Introduction to Artificial Intelligence"
+      term: "Spring 2023"
+      instructor: "Dr. Atefe Aghaei"
+    - name: "Computer Programming"
+      term: "Spring 2021, Fall 2022"
+      instructor: "Dr. Vahideh Moghtadaiee"
+
+- institution: "RoboCamp"
+  title: "Instructor"
+  years: ""
+  courses:
+    - name: "Machine Learning 101"
+      term: "Summer 2023"
+
+- institution: "Danesh High School"
+  title: "Instructor"
+  years: ""
+  courses:
+    - name: "Programming Fundamentals"
+      term: "Summer 2024"

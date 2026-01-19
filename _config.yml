@@ -1,0 +1,18 @@
+# _config.yml
+title: Milad Rabiei
+email: milad.rabiei.01@gmail.com
+description: "MSc student of Robotics Engineering at Università degli Studi di Genova."
+url: "https://milwd.github.io" # Change to your actual URL
+baseurl: "" 
+
+author:
+  name: Milad Rabiei
+  cv: "/files/Milad Rabiei CV.pdf"
+  scholar: "https://scholar.google.com/citations?hl=en&user=DTsVYhoAAAAJ"
+  linkedin: "https://linkedin.com/in/miladrabiei"
+  github: "https://github.com/milwd/"
+  email: "mailto:milad.rabiei.01@gmail.com"
+
+# Build settings
+markdown: kramdown
+theme: null

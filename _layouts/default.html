@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{{ site.title }}</title>
+    <meta name="author" content="{{ site.author.name }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ '/css/stylesheet.css' | relative_url }}">
+    <link rel="shortcut icon" href="{{ '/files/images/favicon/favicon.ico' | relative_url }}">
+  </head>
+
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+      <tbody>
+        <tr style="padding:0px">
+          <td style="padding:0px">
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+              <tbody>
+                <tr style="padding:0px">
+                  <td style="padding:2.5%;width:63%;vertical-align:middle">
+                    <p class="name" style="text-align: center;">{{ site.author.name }}</p>
+                    <p>
+                      I am a MSc student of <b>Robotics Engineering</b> at <b>Università degli Studi di Genova</b>, Italy. <br><br>
+                      Having received full undergraduate scholarship, I did my bachelors in Electrical Engineering at Shahid Beheshti University, Iran, under the supervision of <a href="https://scholar.google.com/citations?user=VzPbMOoAAAAJ&hl=en">Dr. Mohammad Hossein Moaiyeri</a>.
+                      I had the privilege of establishing the Vision division of <a href="https://sbu-team.github.io/">SBU’s Robotics and Intelligent Automation Lab</a> with my peers,
+                      and have been rewarded by the university president and department dean for my contributions to First place victories of the team in international competitions. 
+                      <br>
+                      A livello personale, mi interessa esplorare nuovi hobby, viaggiare e apprendere continuamente ;).
+                    </p>
+                    <p style="text-align:center">
+                      <a href="mailto:{{ site.author.email }}">Email</a> &nbsp;/&nbsp;
+                      <a href="{{ site.author.cv | relative_url }}">CV</a> &nbsp;/&nbsp;
+                      <a href="{{ site.author.scholar }}">Scholar</a> &nbsp;/&nbsp;
+                      <a href="{{ site.author.linkedin }}">LinkedIn</a> &nbsp;/&nbsp;
+                      <a href="{{ site.author.github }}">GitHub</a>
+                    </p>
+                  </td>
+                  <td style="padding:2.5%;width:37%;max-width:37%">
+                    <img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="{{ '/files/images/profile/profile2.jpg' | relative_url }}" class="hoverZoomLink">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            {{ content }}
+            
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+              <tr>
+                <td style="padding:0px">
+                  <br>
+                  <p style="text-align:right;font-size:small;">
+                    Design and source taken from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's</a>. Last updated {{ "now" | date: "%B %Y" }}.
+                  </p>
+                </td>
+              </tr>
+            </tbody></table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
