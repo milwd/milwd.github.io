@@ -145,30 +145,25 @@ span.highlight {
     border-radius: 10px;
 }
 
-/* Custom Font for Headers */
-h1, h2, h3, .name, .papertitle, strong {
-  font-family: 'Roboto Mono', monospace;
-}
-
 /* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   body {
     background-color: #121212;
     color: #e0e0e0;
   }
-  /* Invert simple text colors */
+  
   td, th, p, strong, li {
     color: #e0e0e0;
   }
-  /* Make links lighter so they are readable on dark backgrounds */
+  
   a {
     color: #4db6ac !important; 
   }
-  /* Fix the 'highlight' yellow box for dark mode to be a dark olive/grey */
+  
   tr[bgcolor="#ffffd0"] {
-    background-color: #2c2c2c !important; /* Overrides HTML attribute */
+    background-color: #2c2c2c !important; 
   }
-  /* Optional: slightly dim images so they aren't blindingly bright */
+  
   img {
     opacity: 0.85;
     transition: opacity 0.3s;
@@ -176,4 +171,9 @@ h1, h2, h3, .name, .papertitle, strong {
   img:hover {
     opacity: 1.0;
   }
+} */
+
+/* Custom Font for Headers */
+h1, h2, h3, .name, .papertitle, strong {
+  font-family: 'Roboto Mono', monospace;
 }
