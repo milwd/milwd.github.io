@@ -74,7 +74,7 @@ a {
 
 a:focus,
 a:hover {
-  color: #f09228;
+  color: #db8018;
   text-decoration: none;
 }
 
@@ -102,7 +102,7 @@ h2 {
 
 .papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
 }
 
