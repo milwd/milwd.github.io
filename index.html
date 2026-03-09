@@ -45,37 +45,6 @@ layout: default
   <tbody>
     <tr>
       <td style="padding:16px;width:100%;vertical-align:middle">
-        <h2>Projects</h2>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-    {% for project in site.data.projects %}
-    <tr>
-      <td style="padding:16px;width:20%;vertical-align:middle">
-        <div>
-          <img src="{{ project.image | relative_url }}" width="160">
-        </div>
-      </td>
-      <td style="padding:8px;width:80%;vertical-align:middle">
-        <span class="papertitle">{{ project.title }}</span><br>
-        {% if project.link %}
-        <a href="{{ project.link }}">{{ project.link_text }}</a>
-        {% endif %}
-        <p>{{ project.description }}</p>
-      </td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-    <tr>
-      <td style="padding:16px;width:100%;vertical-align:middle">
         <h2>Teaching</h2>
       </td>
     </tr>
@@ -101,6 +70,37 @@ layout: default
         {% endfor %}
       </td>
     </tr>
+  </tbody>
+</table>
+
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <tbody>
+    <tr>
+      <td style="padding:16px;width:100%;vertical-align:middle">
+        <h2>Projects</h2>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <tbody>
+    {% for project in site.data.projects %}
+    <tr>
+      <td style="padding:16px;width:20%;vertical-align:middle">
+        <div>
+          <img src="{{ project.image | relative_url }}" width="160">
+        </div>
+      </td>
+      <td style="padding:8px;width:80%;vertical-align:middle">
+        <span class="papertitle">{{ project.title }}</span><br>
+        {% if project.link %}
+        <a href="{{ project.link }}">{{ project.link_text }}</a>
+        {% endif %}
+        <p>{{ project.description }}</p>
+      </td>
+    </tr>
+    {% endfor %}
   </tbody>
 </table>
 
