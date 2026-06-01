@@ -32,14 +32,14 @@ books:
   - title: "Beej's Guide to C Programming"
     author: ""
 
-note_categories:
-  - category: "Mechanics/Screw Theory Notes"
-    items:
-      - title: "MMM Notes"
-        url: "/files/rlnotes/MMM_Notes.pdf"
-  - category: "Reinforcement Learning Notes"
-    items:
-      - title: "Part I: Intro and MDP"
-        url: "/files/rlnotes/Reinforcement Learning Notes 1.pdf"
-      - title: "Part II: Dynamic Programming"
-        url: "/files/rlnotes/Reinforcement Learning Notes 2.pdf"
+# note_categories:
+#   - category: "Mechanics/Screw Theory Notes"
+#     items:
+#       - title: "MMM Notes"
+#         url: "/files/rlnotes/MMM_Notes.pdf"
+#   - category: "Reinforcement Learning Notes"
+#     items:
+#       - title: "Part I: Intro and MDP"
+#         url: "/files/rlnotes/Reinforcement Learning Notes 1.pdf"
+#       - title: "Part II: Dynamic Programming"
+#         url: "/files/rlnotes/Reinforcement Learning Notes 2.pdf"
