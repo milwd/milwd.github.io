@@ -4,13 +4,15 @@
   courses:
     - name: "Machine Learning"
       term: "Fall 2023, Spring 2024"
-      instructor: "Dr. Reza Ghaderi"
+      instructor: <a href="https://scholar.google.com/citations?user=Yn2lykIAAAAJ&hl=en">Reza Ghaderi</a>
+
     - name: "Introduction to Artificial Intelligence"
       term: "Spring 2023"
-      instructor: "Dr. Atefe Aghaei"
+      instructor: <a href="https://scholar.google.com/citations?user=2FQ2LvUAAAAJ&hl=en">Atefe Aghaei</a>
+
     - name: "Computer Programming"
       term: "Spring 2021, Fall 2022"
-      instructor: "Dr. Vahideh Moghtadaiee"
+      instructor: <a href="https://scholar.google.com/citations?user=rMSKMg4AAAAJ&hl=en">Vahideh Moghtadaiee</a>
 
 - institution: "RoboCamp"
   title: "Instructor"
@@ -18,7 +20,7 @@
   courses:
     - name: "Machine Learning 101"
       term: "Summer 2023"
-      alongside: "S. Parsa Hemmasi"
+      alongside: <a href="https://scholar.google.com/citations?user=B274PzkAAAAJ&hl=en">Parsa Hemmasi</a>
 
 - institution: "Danesh High School"
   title: "Instructor"
